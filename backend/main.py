@@ -28,6 +28,19 @@ def create_circle():
     
     return jsonify({"message": "Circle created!"}), 201
 
+@app.route("/delete_circle/<int:user_id>", methods=["DELETE"])
+def delete_circle(user_id):
+    circle = Circle.query.get(user_id)
+    
+    if not circle:
+        return jsonify({"message": "User not found"}), 404
+    
+    db.session.delete(circle)
+    db.session.commit()
+    
+    return jsonify({"message": "User deleted!"}), 200
+    
+
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
