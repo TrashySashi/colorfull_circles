@@ -13,3 +13,5 @@ const CirclesList = ({ circles }) => {
             ))}</div>
     </>
 }
+
+export default CirclesList

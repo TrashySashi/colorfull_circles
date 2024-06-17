@@ -1,11 +1,13 @@
 from flask import request, jsonify
 from config import app, db
 from models import Circle
+from flask_cors import CORS
 
 @app.route("/circles", methods=["GET"])
-def get_cirlces():
+def get_circles():
     circles = Circle.query.all()
-    json_circles = list(map(lambda x: x.to_json(), circles))
+    json_circles = [{ "color": "blue", "circleName": "Ivan", "id": 1 }]
+    # list(map(lambda x: x.to_json(), circles))
     return jsonify({"circles": json_circles})
 
 @app.route("/create_cirlce", methods=["POST"])
