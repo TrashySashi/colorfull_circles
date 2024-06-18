@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import CirclesList from '../components/CirclesList';
 import './app.css';
+import CirclesForm from "../components/CircleForm";
 
 export function App() {
   const [circles, setCircles] = useState([]);
@@ -34,6 +35,8 @@ export function App() {
       ) : (
         <CirclesList circles={circles} />
       )}
+
+      <CirclesForm />
     </>
   );
 }
