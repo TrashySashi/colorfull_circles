@@ -36,8 +36,8 @@ const CirclesForm = () => {
 
     return (
         <div>
-            <h2>Create Circle Form</h2>
-            <form onSubmit={onSubmit}>
+            <h2 className="title">Създай своето кръгче</h2>
+            <form className="circle-form" onSubmit={onSubmit}>
                 <div>
                     <label htmlFor="color">Color:</label>
                     <input

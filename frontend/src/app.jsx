@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import CirclesList from '../components/CirclesList';
 import './app.css';
-import CirclesForm from "../components/CircleForm";
+import CirclesForm from "../components/form/CircleForm";
 
 export function App() {
   const [circles, setCircles] = useState([]);
@@ -28,12 +28,16 @@ export function App() {
     }
   };
 
+  const handleDeletion = () => {
+    fetchCircles()
+  }
+
   return (
     <>
       {error ? (
         <div>Error: {error}</div>
       ) : (
-        <CirclesList circles={circles} />
+        <CirclesList circles={circles} deleteFunction={handleDeletion} />
       )}
 
       <CirclesForm />
