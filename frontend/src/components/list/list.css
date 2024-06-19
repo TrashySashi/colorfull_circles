@@ -1,0 +1,8 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3.2rem;
+    background-color: antiquewhite;
+    min-height: 100vh;
+    padding: 12.8rem 5rem 15rem 5rem
+}

@@ -1,0 +1,18 @@
+:root {
+    --blue-tint-1: #769cbc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+html {
+    background-color: blueviolet;
+    font-size: 62.5%;
+}

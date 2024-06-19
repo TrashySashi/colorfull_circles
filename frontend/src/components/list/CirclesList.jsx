@@ -1,5 +1,7 @@
 import axios from "axios"
 import React from "react"
+import './list.css'
+
 
 const CirclesList = ({ circles, deleteFunction }) => {
 
@@ -19,15 +21,15 @@ const CirclesList = ({ circles, deleteFunction }) => {
     };
 
     return <>
-        <div>
+        <section className="container">
             {circles.map((circle) => (
-                <div>
+                <div className="circle-container">
                     <h1>{circle.circleName}</h1>
                     <p>{circle.color}</p>
                     <button onClick={() => onDelete(circle.id)}>Delete</button>
                 </div>
 
-            ))}</div>
+            ))}</section>
     </>
 }
 

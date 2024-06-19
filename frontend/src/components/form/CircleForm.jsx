@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from 'axios';
+import "./form.css"
 
 const CirclesForm = () => {
     const [color, setColor] = useState("");
