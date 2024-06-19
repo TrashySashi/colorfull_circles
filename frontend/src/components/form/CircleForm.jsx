@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from 'axios';
 import "./form.css"
+import Glass from "../glass/Glass";
+import { Link } from "react-router-dom";
 
 const CirclesForm = () => {
     const [color, setColor] = useState("");
@@ -36,30 +38,37 @@ const CirclesForm = () => {
     };
 
     return (
-        <div>
-            <h2 className="title">Създай своето кръгче</h2>
+        <section className="form-container">
+
+            <h2 className="title">Създай кръгче</h2>
             <form className="circle-form" onSubmit={onSubmit}>
-                <div>
+                <div className="field">
+
                     <label htmlFor="color">Color:</label>
-                    <input
-                        type="text"
-                        id="color"
-                        value={color}
-                        onChange={(e) => setColor(e.target.value)}
-                    />
+                    <select className="inputs" name="" id="">
+                        <option value="pink">pink</option>
+                        <option value="white">white</option>
+                        <option value="blue">blue</option>
+                        <option value="purple">purple</option>
+                        <option value="red">red</option>
+                    </select>
                 </div>
-                <div>
+                <div className="field">
                     <label htmlFor="circleName">Circle Name:</label>
                     <input
+                        className="inputs"
                         type="text"
                         id="circleName"
                         value={circleName}
                         onChange={(e) => setCircleName(e.target.value)}
                     />
                 </div>
-                <button type="submit">Create Circle</button>
+                <button className="create-btn" type="submit">Create Circle</button>
             </form>
-        </div>
+
+            <Link className="circles-link" to="/circles">Circles</Link>
+
+        </section >
     );
 };
 

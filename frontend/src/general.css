@@ -1,13 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+PT:wght@100..400&display=swap');
+
+
 :root {
+
+    --dark-red: #a52a2a;
 
     --bg: #0c1720;
     --bg-tint-1: #242e36;
 
 
     --green: #04aa6b;
+    --dark-green: #22bb69;
 
     --purple: #D600FF;
 
+
+
+    --light-blue: #addfff;
     --blue-tint-1: #769cbc;
     --blue-tint-2: #1a99fd;
 }
@@ -23,7 +32,20 @@
 }
 
 html {
+    font-family: "Playwrite PT", cursive;
     background-color: var(--bg-tint-1);
     font-size: 62.5%;
     color: white;
+    line-height: 7rem;
+}
+
+.btn {
+    width: 9rem;
+    height: 4rem;
+    background-color: var(--dark-red);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.7rem;
+    font-family: inherit;
+
 }

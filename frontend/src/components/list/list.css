@@ -2,18 +2,34 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 3.2rem;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     min-height: 100vh;
-    padding: 12.8rem 0 15rem 0;
+    padding: 12.8rem 10rem 15rem 10rem;
 }
 
 .card {
-    background-color: aqua;
     /* background-color: aqua; */
+    border-radius: 50%;
+    border: solid 2px var(--dark-red);
+
     height: 25rem;
-    width: 40rem;
-    /* margin-top: 4rem; */
+    width: 25rem;
+
     padding-left: 3rem;
     padding-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+}
+
+.circle-name {
+    font-size: 6rem;
+    justify-self: center;
+}
+
+.circle-color {
+    font-size: 4rem;
+    margin-bottom: 1rem;
 }

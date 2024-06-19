@@ -3,7 +3,7 @@ import React from "react"
 import './list.css'
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
-import Glass from "../glass/Glass"
+
 
 
 const CirclesList = ({ circles, deleteFunction }) => {
@@ -29,13 +29,16 @@ const CirclesList = ({ circles, deleteFunction }) => {
         <section className="container">
             {circles.map((circle) => (
                 <div onClick={() => navigation(`circle/${circle.id}`)} className="card">
-                    <h1>{circle.circleName}</h1>
-                    <p>{circle.color}</p>
-                    <button onClick={() => onDelete(circle.id)}>Delete</button>
+                    <h1 className="circle-name">{circle.circleName}</h1>
+                    <p className="circle-color">{circle.color}</p>
+                    <button className="btn" onClick={() => onDelete(circle.id)}>Delete</button>
                 </div>
 
 
-            ))}<Glass classes="box blue" /></section>
+            ))}
+            <Link to="/create_circle" >Back</Link>
+
+        </section>
     </>
 }
 

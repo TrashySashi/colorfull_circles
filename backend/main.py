@@ -40,6 +40,13 @@ def delete_circle(user_id):
     db.session.commit()
     
     return jsonify({"message": "User deleted!"}), 200
+
+@app.route("/circles/circle/id=<int:id>", methods=["GET"])  
+def get_circle(id):
+    circle = Circle.query.get(id)
+    if not circle:
+        return jsonify({"message": "Circle not found"}), 404
+    return jsonify(circle.to_json()), 200
     
 
 if __name__ == "__main__":
