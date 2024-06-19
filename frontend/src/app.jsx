@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import { Route, BrowserRouter, Routes, Router } from "react-router-dom"
 import CirclesList from './components/list/CirclesList';
-
 import CirclesForm from "./components/form/CircleForm";
-import { Route, BrowserRouter, Routes } from "react-router-dom"
+import Glass from "./components/glass/Glass";
+
 
 export function App() {
   const [circles, setCircles] = useState([]);
@@ -40,6 +41,7 @@ export function App() {
           <Route path='/circles' element={<CirclesList circles={circles} deleteFunction={handleDeletion} />} />
           <Route path='/create_circle' element={<CirclesForm />} />
 
+          <Route path="circles/circle/:id" element={<Glass />} />
 
         </Routes>
 

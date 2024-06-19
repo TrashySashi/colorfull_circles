@@ -1,5 +1,15 @@
 :root {
+
+    --bg: #0c1720;
+    --bg-tint-1: #242e36;
+
+
+    --green: #04aa6b;
+
+    --purple: #D600FF;
+
     --blue-tint-1: #769cbc;
+    --blue-tint-2: #1a99fd;
 }
 
 * {
@@ -13,6 +23,7 @@
 }
 
 html {
-    background-color: blueviolet;
+    background-color: var(--bg-tint-1);
     font-size: 62.5%;
+    color: white;
 }

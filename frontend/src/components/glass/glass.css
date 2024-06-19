@@ -1,25 +1,17 @@
-/* .section-balala { */
-/* background-image: url("../img/bacgroundimage.jpg"); */
-/* background-color: var(--bg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.circle-box {
     min-height: 100vh;
-    padding: 12.8rem 0 15rem 0;
-} */
-
-.glassmorphism-container {
-    position: relative;
-    /* width: 70rem; */
-    /* height: 40rem; */
-    border-radius: 15px;
-    /* backdrop-filter: blur(10px); */
+    padding: 3rem 0 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .glassmorphism-container {
     position: relative;
-    /* width: 280px; */
-    /* height: 400px; */
+    /* padding-left: 3rem; */
+    /* padding-right: 3rem; */
+    width: 100rem;
+    height: 65rem;
     /* box-shadow: 20px 20px 50px rgba(0,0,0,0.5); */
     border-radius: 15px;
     /* margin: 30px; */
@@ -65,15 +57,17 @@
     /* box-shadow: 0 0 20px rgba(255, 0, 0, 0); */
 
     pointer-events: none;
+
     /* transition: opacity 0.5s ease, box-shadow 0.5s ease; */
     /* Add opacity to transition */
     /* border: 1px solid red; */
 }
 
 .glassmorphism-container:hover .color-overlay {
-    background-image: radial-gradient(circle, rgba(255, 0, 0, 0.299) 0%, rgba(255, 50, 50, 0.5636998254799301) 51%, rgba(255, 70, 70, 0.49389179755671897) 100%);
-    box-shadow: -40px -40px 2rem red;
-    /* filter: blur(100px); */
+    opacity: 0.8;
+    background: red;
+    box-shadow: -2px -2px 600px red;
+    filter: blur(100px);
 }
 
 .glassmorphism-container.green:hover .color-overlay {

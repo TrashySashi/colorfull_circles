@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import VanillaTilt from 'vanilla-tilt';
+import './glass.css'
 
-const Glass = ({ children, classes = '' }) => {
+const Glass = ({ class = '' }) => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
     const handleMouseMove = (e) => {
@@ -23,16 +24,21 @@ const Glass = ({ children, classes = '' }) => {
     }, []);
 
     return (
-        <div className={`glassmorphism-container ${classes}`} onMouseMove={handleMouseMove}>
-            <div className={`glassmorphism-div`}>
-                {children}
+        <section className='circle-box'>
 
-                <div className="color-overlay" style={{
-                    left: mousePosition.x + 'px',
-                    top: mousePosition.y + 'px',
-                }} />
+
+            <div className={`glassmorphism-container ${classes}`} onMouseMove={handleMouseMove}>
+                <div className={`glassmorphism-div`}>
+
+
+                    <div className="color-overlay" style={{
+                        left: mousePosition.x + 'px',
+                        top: mousePosition.y + 'px',
+                    }} />
+                </div>
             </div>
-        </div>
+            {/* <div className='box'>hi</div> */}
+        </section>
     );
 };
 

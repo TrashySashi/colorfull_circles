@@ -4,5 +4,16 @@
     gap: 3.2rem;
     background-color: antiquewhite;
     min-height: 100vh;
-    padding: 12.8rem 5rem 15rem 5rem
+    padding: 12.8rem 0 15rem 0;
+}
+
+.card {
+    background-color: aqua;
+    /* background-color: aqua; */
+    height: 25rem;
+    width: 40rem;
+    /* margin-top: 4rem; */
+    padding-left: 3rem;
+    padding-right: 3rem;
+
 }
